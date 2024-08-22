@@ -14,8 +14,8 @@ RELEASE="$(rpm -E %fedora)"
 
 # this installs a package from fedora repos
 # as a reminder, Merkuro is the KDE Calendar, you dummy /s
-curl "https://pkgs.tailscale.com/stable/fedora/tailscale.repo" | tee /etc/yum.repos.d/tailscale.repo
-curl "https://copr.fedorainfracloud.org/coprs/yalter/niri/repo/fedora-40/yalter-niri-fedora-40.repo" | tee /etc/yum.repos.d/
+curl "https://pkgs.tailscale.com/stable/fedora/tailscale.repo" > /etc/yum.repos.d/tailscale.repo
+curl "https://copr.fedorainfracloud.org/coprs/yalter/niri/repo/fedora-40/yalter-niri-fedora-40.repo" > /etc/yum.repos.d/yalter-niri-fedora-40.repo
 rpm-ostree install bat eza kitty merkuro tailscale zsh niri
 
 # this would install a package from rpmfusion
