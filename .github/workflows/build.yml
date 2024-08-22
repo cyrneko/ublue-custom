@@ -9,6 +9,7 @@ on:
   push:
     branches:
       - main
+      - mesa
     paths-ignore:
       - '**/README.md'
   workflow_dispatch:
