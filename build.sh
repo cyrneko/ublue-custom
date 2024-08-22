@@ -13,7 +13,10 @@ RELEASE="$(rpm -E %fedora)"
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-rpm-ostree install screen
+# as a reminder, Merkuro is the KDE Calendar, you dummy /s
+curl "https://pkgs.tailscale.com/stable/fedora/tailscale.repo" | sudo tee /etc/yum.repos.d/tailscale.repo
+curl "https://copr.fedorainfracloud.org/coprs/yalter/niri/repo/fedora-40/yalter-niri-fedora-40.repo" | sudo tee /etc/yum.repos.d/
+rpm-ostree install bat eza kitty merkuro tailscale zsh niri
 
 # this would install a package from rpmfusion
 # rpm-ostree install vlc
