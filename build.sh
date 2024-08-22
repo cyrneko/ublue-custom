@@ -16,7 +16,8 @@ RELEASE="$(rpm -E %fedora)"
 # as a reminder, Merkuro is the KDE Calendar, you dummy /s
 curl "https://pkgs.tailscale.com/stable/fedora/tailscale.repo" > /etc/yum.repos.d/tailscale.repo
 curl "https://copr.fedorainfracloud.org/coprs/yalter/niri/repo/fedora-40/yalter-niri-fedora-40.repo" > /etc/yum.repos.d/yalter-niri-fedora-40.repo
-rpm-ostree install bat eza kitty merkuro tailscale zsh niri
+curl "https://copr.fedorainfracloud.org/coprs/errornointernet/packages/repo/fedora-40/errornointernet-packages-fedora-40.repo" > /etc/yum.repos.d/errornointernet-packages-fedora-40.repo
+rpm-ostree install bat eza kitty tailscale zsh niri xwayland-satellite dolphin
 
 # this would install a package from rpmfusion
 # rpm-ostree install vlc
