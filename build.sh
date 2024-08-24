@@ -13,5 +13,15 @@ curl "https://pkgs.tailscale.com/stable/fedora/tailscale.repo" > /etc/yum.repos.
 curl "https://copr.fedorainfracloud.org/coprs/yalter/niri/repo/fedora-40/yalter-niri-fedora-40.repo" > /etc/yum.repos.d/yalter-niri-fedora-40.repo
 curl "https://copr.fedorainfracloud.org/coprs/errornointernet/packages/repo/fedora-40/errornointernet-packages-fedora-40.repo" > /etc/yum.repos.d/errornointernet-packages-fedora-40.repo
 rpm-ostree install bat eza kitty tailscale zsh niri xwayland-satellite nautilus wf-recorder
+rpm-ostree override remove mako alacritty firefox
+
+mkdir git && cd git
+git clone --depth 1 https://codeberg.org/cyrneko/dotfiles
+# cp -r ./dotfiles/niri/ /etc/...
+# TODO: ...where does the config go? will figure out later.
+cp -r ./dotfiles/waybar/* /etc/xdg/waybar/
+cp -r ./dotfiles/fuzzel/fuzzel.ini /etc/xdg/fuzzel/fuzzel.ini
+cd ..
+rm -rf ./git/
 
 systemctl enable podman.socket
