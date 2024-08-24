@@ -19,7 +19,7 @@ mkdir git && cd git
 git clone --depth 1 https://codeberg.org/cyrneko/dotfiles
 # cp -r ./dotfiles/niri/ /etc/...
 # TODO: ...where does the config go? will figure out later.
-cp -r ./dotfiles/waybar/* /etc/xdg/waybar/
+cp -r ./dotfiles/waybar/config.jsonc ./dotfiles/waybar/style.css /etc/xdg/waybar/
 cp -r ./dotfiles/fuzzel/fuzzel.ini /etc/xdg/fuzzel/fuzzel.ini
 cd ..
 rm -rf ./git/
