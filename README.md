@@ -2,13 +2,14 @@
 
 This is a custom image built on top of Sericea-Nvidia from the [Universal-Blue](https://universal-blue.org) project.
 
-> (Info below may not always be up-to-date)
+> (Info below may not always be up-to-date or complete)
 
 it includes some repos to pull in the following packages:
 
 - `tailscale`
 - `xwayland-satellite` (will eventually repackage myself)
 - `niri` (stable)
+- `nwg-look`
 
 It has the following package overrides:
 remove:
@@ -16,9 +17,12 @@ remove:
 - `firefox`
 - `mako` (I use dunst instead)
 - `alacritty` (I use kitty instead)
+- `foot` (sway leftover)
+- `xarchiver` (sway leftover)
 
-In the future it will also include my dotfiles, but I am still working on that.
+Because Niri currently also doesn't support system-wide configuration, I cannot yet include a Niri Configuration into the image. Please pull it manually and move it to `$HOME/.config/niri` instead:
 
-As for _right now_, my dotfiles can be found on the main branch of https://codeberg.org/cyrneko/dotfiles (to be updated soon)
-
-Because Niri currently also doesn't support system-wide configuration, I cannot yet include a Niri Configuration into the image. Please pull it manually and move it to `$HOME/.config/niri` instead.
+```bash
+git clone --depth 1 https://codeberg.org/cyrneko/dotfiles -b main
+cp -r ./dotfiles/niri ~/.config/
+```
