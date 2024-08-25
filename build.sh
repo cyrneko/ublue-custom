@@ -13,7 +13,7 @@ curl "https://pkgs.tailscale.com/stable/fedora/tailscale.repo" > /etc/yum.repos.
 curl "https://copr.fedorainfracloud.org/coprs/yalter/niri/repo/fedora-40/yalter-niri-fedora-40.repo" > /etc/yum.repos.d/yalter-niri-fedora-40.repo
 curl "https://copr.fedorainfracloud.org/coprs/errornointernet/packages/repo/fedora-40/errornointernet-packages-fedora-40.repo" > /etc/yum.repos.d/errornointernet-packages-fedora-40.repo
 curl "https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell/repo/fedora-40/tofik-nwg-shell-fedora-40.repo" > /etc/yum.repos.d/tofik-nwg-shell-fedora-40.repo
-rpm-ostree install bat eza kitty tailscale zsh niri xwayland-satellite nautilus wf-recorder nwg-look
+rpm-ostree install bat eza kitty tailscale zsh niri xwayland-satellite nautilus wf-recorder nwg-look SDL2
 rpm-ostree override remove mako alacritty firefox firefox-langpacks foot xarchiver
 
 mkdir git && cd git

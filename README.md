@@ -20,6 +20,8 @@ remove:
 - `foot` (sway leftover)
 - `xarchiver` (sway leftover)
 
+At the request of a friend, `SDL2` is included by default.
+
 Because Niri currently also doesn't support system-wide configuration, I cannot yet include a Niri Configuration into the image. Please pull it manually and move it to `$HOME/.config/niri` instead:
 
 ```bash
