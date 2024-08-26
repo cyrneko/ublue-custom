@@ -10,6 +10,7 @@ it includes some repos to pull in the following packages:
 - `xwayland-satellite` (will eventually repackage myself)
 - `niri` (stable)
 - `nwg-look`
+- `swww`
 
 It has the following package overrides:
 remove:
@@ -21,6 +22,15 @@ remove:
 - `xarchiver` (sway leftover)
 
 At the request of a friend, `SDL2` is included by default.
+
+For most of the above packages an external repo had to be added. These are as follows:
+
+- https://copr.fedorainfracloud.org/coprs/alebastr/sway-extras (swww)
+- https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell (nwg-look)
+- https://copr.fedorainfracloud.org/coprs/errornointernet/packages (xwayland-satellite)
+- https://copr.fedorainfracloud.org/coprs/yalter/niri
+and one non-copr repo:
+- https://tailscale.com / https://pkgs.tailscale.com/stable/fedora/tailscale.repo
 
 Because Niri currently also doesn't support system-wide configuration, I cannot yet include a Niri Configuration into the image. Please pull it manually and move it to `$HOME/.config/niri` instead:
 
