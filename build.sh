@@ -14,7 +14,7 @@ curl "https://copr.fedorainfracloud.org/coprs/yalter/niri/repo/fedora-40/yalter-
 curl "https://copr.fedorainfracloud.org/coprs/errornointernet/packages/repo/fedora-40/errornointernet-packages-fedora-40.repo" > /etc/yum.repos.d/errornointernet-packages-fedora-40.repo
 curl "https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell/repo/fedora-40/tofik-nwg-shell-fedora-40.repo" > /etc/yum.repos.d/tofik-nwg-shell-fedora-40.repo
 curl "https://copr.fedorainfracloud.org/coprs/alebastr/sway-extras/repo/fedora-40/alebastr-sway-extras-fedora-40.repo" > /etc/yum.repos.d/alebastr-sway-extras-fedora-40.repo
-rpm-ostree install bat eza kitty tailscale zsh niri xwayland-satellite thunar wf-recorder nwg-look SDL2 swww
+rpm-ostree install bat eza kitty tailscale zsh niri xwayland-satellite thunar wf-recorder nwg-look SDL2 swww wlsunset
 rpm-ostree override remove mako alacritty firefox firefox-langpacks foot xarchiver
 
 mkdir git && cd git
