@@ -2,6 +2,8 @@
 
 This is a custom image built on top of Sericea-Nvidia from the [Universal-Blue](https://universal-blue.org) project.
 
+The main purpose of this is to provide myself a uBlue image with the `niri` wayland compositor pre-installed, that I can then apply to all my devices.
+
 > (Info below may not always be up-to-date or complete)
 
 it includes some repos to pull in the following packages:
@@ -11,6 +13,8 @@ it includes some repos to pull in the following packages:
 - `niri` (stable)
 - `nwg-look`
 - `swww`
+- `opendoas` / `doas` (comes preconfigured to be sudo-esque)
+> (sudo won't *yet* be removed from the image and/or disabled by default.)
 
 It has the following package overrides:
 remove:
@@ -18,8 +22,8 @@ remove:
 - `firefox`
 - `mako` (I use dunst instead)
 - `alacritty` (I use kitty instead)
-- `foot` (sway leftover)
-- `xarchiver` (sway leftover)
+- `foot` (sway image leftover)
+- `xarchiver` (sway image leftover)
 
 At the request of a friend, `SDL2` is included by default.
 
