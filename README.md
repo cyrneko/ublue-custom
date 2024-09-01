@@ -2,7 +2,7 @@
 
 This is a custom image built on top of Sericea-Nvidia from the [Universal-Blue](https://universal-blue.org) project.
 
-The main purpose of this is to provide myself a uBlue image with the `niri` wayland compositor pre-installed, that I can then apply to all my devices.
+The main purpose of this is to provide myself a uBlue image with the `niri` wayland compositor pre-installed, that I can then apply to all my devices. This also means that **many of the changes here are very opinionated.** You'll find that things won't quite work out of the box due to image overrides and the likes if you don't know what you're doing.
 
 > (Info below may not always be up-to-date or complete)
 
@@ -36,7 +36,11 @@ For most of the above packages an external repo had to be added. These are as fo
 and one non-copr repo:
 - https://tailscale.com / https://pkgs.tailscale.com/stable/fedora/tailscale.repo
 
-Because Niri currently also doesn't support system-wide configuration, I cannot yet include a Niri Configuration into the image. Please pull it manually and move it to `$HOME/.config/niri` instead:
+## Configuration
+
+This image will automatically include my `dunst`, `waybar`, and `fuzzel` configurations. If you do not want those, fork the repo and comment the relevant block out.
+
+Because Niri currently doesn't support system-wide configuration, I cannot yet include a Niri Configuration into the image. Please pull it manually and move it to `$HOME/.config/niri` instead:
 
 ```bash
 git clone --depth 1 https://codeberg.org/cyrneko/dotfiles -b main
