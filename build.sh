@@ -19,6 +19,7 @@ rpm-ostree override remove mako alacritty firefox firefox-langpacks foot xarchiv
 
 mkdir git && cd git
 git clone --depth 1 https://codeberg.org/cyrneko/dotfiles
+mkdir -p /etc/niri /etc/waybar /etc/fuzzel
 cp -r ./dotfiles/niri/config.kdl /etc/niri/config.kdl
 cp -r ./dotfiles/waybar/config.jsonc ./dotfiles/waybar/style.css /etc/xdg/waybar/
 cp -r ./dotfiles/fuzzel/fuzzel.ini /etc/xdg/fuzzel/fuzzel.ini
