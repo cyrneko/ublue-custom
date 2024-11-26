@@ -14,6 +14,7 @@ rpm-ostree install bat eza kitty tailscale zsh niri xwayland-satellite thunar wf
 rpm-ostree override remove mako alacritty firefox firefox-langpacks foot xarchiver
 
 mkdir git && cd git
+mkdir -p /etc/niri /etc/waybar /etc/xdg/fuzzel
 git clone --depth 1 https://codeberg.org/cyrneko/dotfiles
 cp -r ./dotfiles/niri/config.kdl /etc/niri/config.kdl
 cp -r ./dotfiles/waybar/config.jsonc ./dotfiles/waybar/style.css /etc/xdg/waybar/
