@@ -14,6 +14,7 @@ it includes some repos to pull in the following packages:
 - `nwg-look`
 - `swww`
 - `opendoas` / `doas` (comes preconfigured to be sudo-esque)
+- `librewolf`
 > (sudo won't *yet* be removed from the image and/or disabled by default.)
 
 It has the following package overrides:
@@ -33,16 +34,10 @@ For most of the above packages an external repo had to be added. These are as fo
 - https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell (nwg-look)
 - https://copr.fedorainfracloud.org/coprs/errornointernet/packages (xwayland-satellite)
 - https://copr.fedorainfracloud.org/coprs/yalter/niri
-and one non-copr repo:
+and two non-copr repos:
 - https://tailscale.com / https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+- https://librewolf.net / https://repo.librewolf.net/librewolf.repo
 
 ## Configuration
 
-This image will automatically include my `dunst`, `waybar`, and `fuzzel` configurations. If you do not want those, fork the repo and comment the relevant block out.
-
-Because Niri currently doesn't support system-wide configuration, I cannot yet include a Niri Configuration into the image. Please pull it manually and move it to `$HOME/.config/niri` instead:
-
-```bash
-git clone --depth 1 https://codeberg.org/cyrneko/dotfiles -b main
-cp -r ./dotfiles/niri ~/.config/
-```
+This image will automatically include my `dunst`, `waybar`, `fuzzel` and `niri` configurations. If you do not want those, fork the repo and comment the relevant block (or parts of it) out or override my config by placing your own in `~/.config`.
